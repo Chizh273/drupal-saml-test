@@ -1,0 +1,14 @@
+_core:
+  default_config_hash: 0oXWWjpzbUrr6h29liRUDKPlSHVrxkCexPj4pfUTaSU
+idp:
+  light_saml_idp: light_saml_idp
+logout: false
+logged_in_redirect: '<front>'
+update_email: false
+update_language: false
+no_account_authenticated_user_role: false
+no_account_authenticated_user_account: null
+force_authentication: false
+force_saml_only: false
+account_request_request_account: false
+account_request_create_account: false

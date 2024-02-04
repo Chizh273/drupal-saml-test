@@ -1,0 +1,18 @@
+_core:
+  default_config_hash: fON0iFA7Hkx8odt7SEHx6M2cK925yw_LNsqBjZ_5Tb8
+contact:
+  support:
+    name: 'Support SAML IDP'
+    email: idp@saml.test
+  technical:
+    name: ''
+    email: ''
+organization:
+  name: 'Organization SAML IDP'
+  display_name: 'Organization SAML IDP'
+  url: 'https://saml-sp.ddev.site'
+security:
+  signing:
+    cert_location: ../keys/ca-cert.pem
+    key_location: ../keys/ca-key.pem
+entity_id: 'https://saml-sp.ddev.site/user'

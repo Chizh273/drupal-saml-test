@@ -20,7 +20,21 @@
         "drupal/core-recommended": "^10",
         "pantheon-systems/drupal-integrations": "^10",
         "cweagans/composer-patches": "^1.7",
-        "drush/drush": "^11 || ^12"
+        "drush/drush": "^11 || ^12",
+        "drupal/admin_toolbar": "^3.4",
+        "drupal/devel": "^5.1",
+        "drupal/saml_sp": "^4.2",
+        "drupal/samlauth": "^3.9",
+        "drupal/simplesamlphp_auth": "^4.0",
+        "drupal/saml_idp": "^2.0@beta",
+        "drupal/miniorange_saml_idp": "^3.0",
+        "drupal/miniorange_oauth_client": "^4.0",
+        "drupal/oauth2_client": "^4.1",
+        "drupal/cognito": "^2.1",
+        "drupal/openid_connect": "^1.4",
+        "drupal/simple_oauth": "^5.2",
+        "drupal/light_saml_idp": "^2.0@alpha",
+        "drupal/drupalauth4ssp": "^2.0@RC"
     },
     "require-dev": {
         "drupal/core-dev": "^10"
@@ -28,7 +42,7 @@
     "conflict": {
         "drupal/drupal": "*"
     },
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "prefer-stable": true,
     "extra": {
         "drupal-scaffold": {
@@ -58,7 +72,12 @@
         "patchLevel": {
             "drupal/core": "-p2"
         },
-        "enable-patching": true
+        "enable-patching": true,
+        "patches": {
+            "drupal/light_saml_idp": {
+                "Fix login controller": "./patches/light_saml_idp/fix-login-route.patch"
+            }
+        }
     },
     "autoload": {
         "classmap": ["upstream-configuration/scripts/ComposerScripts.php"]
@@ -78,7 +97,9 @@
             "cweagans/composer-patches": true,
             "drupal/core-composer-scaffold": true,
             "dealerdirect/phpcodesniffer-composer-installer": true,
-            "phpstan/extension-installer": true
+            "phpstan/extension-installer": true,
+            "php-http/discovery": true,
+            "simplesamlphp/composer-module-installer": true
         }
     }
 }

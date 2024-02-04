@@ -1,0 +1,32 @@
+_core:
+  default_config_hash: RBKoBiAffTyjorMrq1-gseMf7ob5CQsERjHfKIb2Vmg
+contact:
+  technical:
+    name: 'Technical SP'
+    email: technical@sp.test
+  support:
+    name: 'Support SP'
+    email: support@sp.test
+organization:
+  name: 'Organization SP'
+  display_name: 'Organization SP'
+  url: 'https://saml-sp.ddev.site'
+strict: true
+security:
+  nameIdEncrypted: false
+  authnRequestsSigned: true
+  logoutRequestSigned: true
+  logoutResponseSigned: true
+  wantMessagesSigned: true
+  wantAssertionsSigned: true
+  wantNameIdEncrypted: false
+  signMetaData: true
+  signatureAlgorithm: 'http://www.w3.org/2001/04/xmldsig-more#rsa-sha256'
+  lowercaseUrlencoding: false
+cert_location: ../keys/ca-cert.pem
+key_location: ../keys/ca-key.pem
+new_cert_location: ''
+entity_id: 'https://saml-sp.ddev.site/user'
+valid_until: ''
+debug: true
+assertion_urls: 'https://saml-sp.ddev.site/saml/consume'
